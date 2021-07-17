@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://127.0.0.1/pet1_schema?useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">pet1_user</property>
+        <property name="connection.password">123</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MariaDBDialect</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!--<property name="connection.url">jdbc:mysql://127.0.0.1/pet3_schema?useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>-->
+        <!--<property name="connection.username">root</property>-->
+        <!--<property name="connection.password">[Petr0vich]</property>-->
+
+
+        <!--jdbc:mysql://127.0.0.1/pet1_schema?characterEncoding=utf8-->
+
+        <!--spring.datasource.url=jdbc:mysql://localhost:3306/sweater?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=yes&characterEncoding=UTF-8-->
+        <!-- <property name="hibernate.hbm2ddl.auto">update </property>-->
+        <!--<mapping resourse = "entities/Student.hbm.xml"></mapping>-->
+        <mapping class ="com.example.entity.Film"></mapping>
+        <mapping class ="com.example.entity.Actor"></mapping>
+        <mapping class ="com.example.entity.Director"></mapping>
+        <mapping class ="com.example.entity.Genre"></mapping>
+
+
+    </session-factory>
+</hibernate-configuration>

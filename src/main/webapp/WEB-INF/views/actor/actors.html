@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Все актеры</title>
+</head>
+<body>
+<div th:each="actor : ${actor}">
+    <a th:href="@{/actor/{id}(id=${actor.getId()})}" th:text="${actor.getFirstName()}"
+    >user</a>
+    <a th:href="@{/actor/{id}(id=${actor.getId()})}" th:text="${actor.getLastName()}"
+    >user</a>
+    <a th:href="@{/actor/{id}(id=${actor.getId()})}" th:text="${actor.getNationality()}"
+    >user</a>
+
+</div>
+
+<br/>
+<hr/>
+<a href="/Cinema7_war_exploded/actor/newactor">Create new actor</a>
+</body>
+</html>

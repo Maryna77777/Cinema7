@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New actor</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/actor}" th:object="${actor}">
+    <label for="firstName">Enter firstName: </label>
+    <input type="text" th:field="*{firstName}" id="firstName"/>
+    <br/>
+    <label for="lastName">Enter lastName: </label>
+    <input type="text" th:field="*{lastName}" id="lastName"/>
+    <br/>
+    <label for="nationality">Enter nationality: </label>
+    <input type="text" th:field="*{nationality}" id="nationality"/>
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+</body>
+</html>

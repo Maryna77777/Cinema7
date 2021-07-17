@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Все жанры</title>
+</head>
+<body>
+<div th:each="genre : ${genre}">
+    <a th:href="@{/genre/{id}(id=${genre.getId()})}" th:text="${genre.getCategory()}"
+    >user</a>
+
+
+</div>
+
+<br/>
+<hr/>
+
+</body>
+</html>

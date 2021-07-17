@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Режиссер</title>
+</head>
+<body>
+<p th:text="${director.getFirstNameDirector()}">VALUE</p>
+<p th:text="${director.getLastNameDirector()}">VALUE</p>
+<p th:text="${director.getNationalityDirector()}">VALUE</p>
+<p th:text="${director.getId()}">VALUE</p>
+
+<a th:href="@{/director/{id}/edit(id=${director.getId()})}">Edit</a>
+
+<form th:method="DELETE" th:action="@{/director/{id}(id=${director.getId()})}">
+    <input type="submit" value="Delete"/>
+
+</form>
+</body>
+</html>

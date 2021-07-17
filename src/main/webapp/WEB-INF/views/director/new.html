@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Новый режиссер</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/director}" th:object="${director}">
+    <label for="firstNameDirector">Enter name: </label>
+    <input type="text" th:field="*{firstNameDirector}" id="firstNameDirector"/>
+    <br/>
+    <label for="lastNameDirector">Enter Last Name: </label>
+    <input type="text" th:field="*{lastNameDirector}" id="lastNameDirector"/>
+    <br/>
+    <label for="nationalityDirector">Enter nationality: </label>
+    <input type="text" th:field="*{nationalityDirector}" id="nationalityDirector"/>
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+</body>
+</html>
